@@ -45,6 +45,24 @@ public class StatsDemo
        mean = sum/count;
        
        scanner.close();
+       
+       fr = new FileReader(filename);
+       scanner = new Scanner(fr);
+       
+       sum = 0;
+       count = 0;
+       
+       while(scanner.hasNextDouble())
+       {
+	       double num = scanner.nextDouble();
+	       difference = num - mean;
+	       sum += Math.pow(difference, 2);
+	       count ++;
+       }
+       
+       stdDev = Math.sqrt(sum/count);
+       
+       scanner.close();
       //store the calculated mean
       // ADD LINES FOR TASK #4 HERE
       // Create a FileReader object passing it the filename
