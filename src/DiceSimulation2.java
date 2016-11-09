@@ -27,7 +27,7 @@ public class DiceSimulation2
       int sixes = 0;       // Number of double six rolls
 
       // TASK #1 Enter your code for the algorithm here
-      for(count = 1; count < NUMBER; count ++)
+      for(count; count < NUMBER; count ++)
       {
     	  die1Value = generator.nextInt(6) + 1;
     	  die2Value = generator.nextInt(6) + 1;
